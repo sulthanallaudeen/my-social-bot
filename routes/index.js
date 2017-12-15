@@ -24,7 +24,7 @@ router.post('/', function(req, res, next) {
 
     client.post('statuses/update', { status: req.body.tweet }, function(error, tweet, response) {
         if (error) {
-            res.send({ "success": 0, 'error': error });
+            res.send({ "success": 0, 'error': error, 'body': req.body });
         } else {
             res.send({ "success": 1, 'tweet': tweet, 'response': response });
         }
