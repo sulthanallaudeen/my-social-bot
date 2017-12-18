@@ -2,9 +2,9 @@ var express = require('express');
 var router = express.Router();
 var Twitter = require('twitter');
 
-// router.post('/', function(req, res, next) {
-//     res.render('index', { title: 'Twitter Bot' });
-// });
+router.get('/', function(req, res, next) {
+    res.render('index', { title: 'Twitter Bot' });
+});
 /* GET home page. */
 router.post('/', function(req, res, next) {
     console.log(req.body)
