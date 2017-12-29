@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
     res.render('index', { title: 'Twitter Bot' });
 });
 /* GET home page. */
-router.post('/', function(req, res, next) {
+router.post('/postTweet', function(req, res, next) {
     console.log(req.body)
     var client = new Twitter({
         consumer_key: req.body.consumer_key,
